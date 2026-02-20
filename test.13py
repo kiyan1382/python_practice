@@ -1,0 +1,10 @@
+def func(n):
+    k = 0
+    p = 0
+    j = 0
+    s = 1
+    l = 2
+    for i in range(10, 2*n + 6, 5):
+        p = k
+        k = s
+        j = l
