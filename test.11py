@@ -1,0 +1,18 @@
+# F(n) = 3n^2 + 4n - 8
+def func1(n):
+    for i in range(n):
+        for j in range(n):
+            print(i, j, i + j)
+    for i in range(n-2):
+        a = 0
+        b = 1
+        c = 2
+        d = 3
+
+# F(n) = n^2 + n
+def func2(n):
+    for i in range(n):
+        for j in range(n):
+            p = i + j
+    for i in range(n):
+        t = i
