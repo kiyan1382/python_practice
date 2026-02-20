@@ -1,0 +1,46 @@
+class Tree_Node:
+    def __init__(self, x):
+        self.data = x
+        self.left = None
+        self.right = None
+
+
+# تعداد برگ‌ها (گره‌هایی که هیچ فرزندی ندارند)
+def count_leaves(root):
+    if root is None:
+        return 0
+    
+    if root.left is None and root.right is None:
+        return 1
+    
+    return count_leaves(root.left) + count_leaves(root.right)
+
+
+# تعداد گره‌های درجه 1 (فقط یک فرزند دارند)
+def count_1deg(root):
+    if root is None:
+        return 0
+    
+    count = 0
+    if (root.left is None and root.right is not None) or \
+       (root.left is not None and root.right is None):
+        count = 1
+    
+    return count + count_1deg(root.left) + count_1deg(root.right)
+
+
+# تعداد گره‌های درجه 2 (دو فرزند دارند)
+def count_2deg(root):
+    if root is None:
+        return 0
+    
+    count = 0
+    if root.left is not None and root.right is not None:
+        count = 1
+    
+    return count + count_2deg(root.left) + count_2deg(root.right)
+
+
+# مجموع کل داده‌های درخت
+def sum_tree(root):
+    if
