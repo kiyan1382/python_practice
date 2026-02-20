@@ -1,0 +1,32 @@
+# Fibonacci (نسخه بهینه‌تر)
+def fib(n):
+    if n <= 2:
+        return 1
+    return fib(n-1) + fib(n-2)
+
+
+# ضرب ماتریس n*n
+def matrix_mult(a, b):
+    n = len(a)
+    c = [[0 for _ in range(n)] for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                c[i][j] += a[i][k] * b[k][j]
+
+    return c
+
+
+# تابع بازگشتی اصلاح‌شده
+def test(a, b):
+    if a > b:
+        return a * b
+    
+    if a <= 0 or b <= 0:
+        return 0
+
+    return test(a, b-2) + test(a-1, b-3) + 6
+
+
+print(test(3, 7))
