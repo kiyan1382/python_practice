@@ -1,0 +1,18 @@
+class dnode():
+    def __init__(self , x):
+        self.Data = x
+        self.next = None
+        self.back = None
+
+
+class dlinked_list:
+    def __init__(self):
+        self.head = None
+
+    def ins_frist(self , x):
+        a = dnode(x)
+        if self.head is None:
+            self.head = a
+            return
+        a.next = self.head
+        self.head.back =
